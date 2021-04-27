@@ -11,6 +11,7 @@ class VGG(nn.Module):
     def __init__(self):
         super(VGG, self).__init__()
         
+        # Load pretrained VGG16
         model = models.vgg16(pretrained = True)
         first = model.features[0]
         features  = model.features[1:31]
